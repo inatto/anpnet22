@@ -37,6 +37,7 @@
                 <MenuItem Header="Financeiro" Padding="4">
                     <MenuItem Header="Despesas" Click="MenuDespesas_Click"/>
                     <MenuItem Header="Receitas" Click="MenuReceitas_Click"/>
+                    <MenuItem Header="Grupos contábeis" Click="MenuGrupos_Click"/>
                     <Separator />
                     <MenuItem Header="Pendências de associado" Click="MenuPendencias_Click"/>
                     <MenuItem Header="Enviar e-mails de aviso de pendência" Click="MenuPendencias_Click"/>

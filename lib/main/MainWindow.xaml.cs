@@ -3,7 +3,6 @@ using System.Windows.Input;
 using intnet22.lib.associate;
 using intnet22.lib.financial;
 using intnet22.lib.jud;
-using intnet22.lib.legal;
 
 namespace anpnet22.lib.main
 {
@@ -14,7 +13,7 @@ namespace anpnet22.lib.main
     public partial class MainWindow
     {
 
-        public static RoutedCommand AssociatesOpen = new RoutedCommand();
+        public static readonly RoutedCommand AssociatesOpen = new RoutedCommand();
 
         public MainWindow()
         {
@@ -49,7 +48,7 @@ namespace anpnet22.lib.main
         private void MenuJuridico_Click(object? sender, RoutedEventArgs? e)
         {
             //
-            JudList window = new()
+            PartsList window = new()
             {
                 WindowStartupLocation = WindowStartupLocation.CenterScreen,
                 WindowState = WindowState.Normal,
@@ -79,12 +78,11 @@ namespace anpnet22.lib.main
             //
             Receitas window = new()
             {
+                Owner = this,
                 WindowStartupLocation = WindowStartupLocation.CenterScreen,
-                WindowState = WindowState.Normal
+                WindowState = WindowState.Normal,
             };
 
-            //
-            window.Owner = this;
             window.Show();
 
         }
@@ -94,18 +92,30 @@ namespace anpnet22.lib.main
             //
             Pendencias window = new()
             {
+                Owner = this,
                 WindowStartupLocation = WindowStartupLocation.CenterScreen,
-                WindowState = WindowState.Normal
+                WindowState = WindowState.Normal,
             };
 
-            //
-            window.Owner = this;
             window.Show();
         }
 
         private void OpenCommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             MenuAssociados_Click();
+        }
+
+        private void MenuGrupos_Click(object sender, RoutedEventArgs e)
+        {
+            //
+            GruposContabeis window = new()
+            {
+                Owner = this,
+                WindowState = WindowState.Normal,
+                WindowStartupLocation = WindowStartupLocation.CenterScreen
+            };
+
+            window.Show();
         }
     }
 }
