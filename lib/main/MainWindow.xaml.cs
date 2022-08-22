@@ -59,6 +59,20 @@ namespace anpnet22.lib.main
             window.Show();
         }
 
+        private void MenuProcessos_Click(object? sender, RoutedEventArgs? e)
+        {
+            //
+            ProcessesList window = new()
+            {
+                WindowStartupLocation = WindowStartupLocation.CenterScreen,
+                WindowState = WindowState.Normal,
+                //
+                Owner = this
+            };
+
+            window.Show();
+        }
+
         private void MenuDespesas_Click(object sender, RoutedEventArgs e)
         {
             //

@@ -46,6 +46,7 @@
                 </MenuItem>
 
                 <MenuItem Header="Jurídico" Padding="4">
+                    <MenuItem Header="Processos" Click="MenuProcessos_Click"  />
                     <MenuItem Header="Consultar" Click="MenuJuridico_Click"  />
                     <MenuItem Header="Relatórios"/>
                 </MenuItem>
