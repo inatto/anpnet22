@@ -22,16 +22,16 @@
             <Menu DockPanel.Dock="Top" Padding="4">
 
                 <MenuItem Header="Principal" Padding="4">
-                    <MenuItem Header="Tema" />
-                    <MenuItem Header="Configurações"/>
-                    <MenuItem Header="Reiniciar acesso"/>
+                    <MenuItem Header="Tema"  IsEnabled="False"/>
+                    <MenuItem Header="Configurações" IsEnabled="False"/>
+                    <MenuItem Header="Reiniciar acesso" IsEnabled="False"/>
                     <Separator />
-                    <MenuItem Header="Sair" />
+                    <MenuItem Header="Sair"  IsEnabled="False"/>
                 </MenuItem>
 
                 <MenuItem Header="Associados" Padding="4">
                     <MenuItem Header="Consultar" Click="MenuAssociados_Click" InputGestureText="CTRL + A" />
-                    <MenuItem Header="Relatórios" />
+                    <MenuItem Header="Relatórios" IsEnabled="False"/>
                 </MenuItem>
 
                 <MenuItem Header="Financeiro" Padding="4">
@@ -39,48 +39,45 @@
                     <MenuItem Header="Receitas" Click="MenuReceitas_Click"/>
                     <MenuItem Header="Grupos contábeis" Click="MenuGrupos_Click"/>
                     <Separator />
-                    <MenuItem Header="Pendências de associado" Click="MenuPendencias_Click"/>
-                    <MenuItem Header="Enviar e-mails de aviso de pendência" Click="MenuPendencias_Click"/>
+                    <MenuItem Header="Pendências de associado" IsEnabled="False"/>
+                    <MenuItem Header="Enviar e-mails de aviso de pendência" IsEnabled="False"/>
                     <Separator />
-                    <MenuItem Header="Ver todos os lançamentos"/>
+                    <MenuItem Header="Ver todos os lançamentos" IsEnabled="False"/>
                 </MenuItem>
 
                 <MenuItem Header="Jurídico" Padding="4">
                     <MenuItem Header="Processos" Click="MenuProcessos_Click"  />
-                    <MenuItem Header="Consultar" Click="MenuJuridico_Click"  />
-                    <MenuItem Header="Relatórios"/>
+                    <!-- <MenuItem Header="Consultar" Click="MenuJuridico_Click"  /> -->
+                    <!-- <MenuItem Header="Relatórios"/> -->
                 </MenuItem>
 
                 <MenuItem Header="Conteúdo" Padding="4">
-                    <MenuItem Header="Artigos"/>
-                    <MenuItem Header="Notícias"/>
-                    <MenuItem Header="Restrito"/>
+                    <MenuItem Header="Artigos" IsEnabled="False"/>
+                    <MenuItem Header="Notícias" IsEnabled="False"/>
+                    <MenuItem Header="Restrito" IsEnabled="False"/>
                 </MenuItem>
 
                 <MenuItem Header="Marketing" Padding="4">
-                    <MenuItem Header="Campanhar"/>
-                    <MenuItem Header="E-mail marketing"/>
-                    <MenuItem Header="Calendário" />
-                    <MenuItem Header="Questionários"/>
+                    <MenuItem Header="Campanhas" IsEnabled="False"/>
+                    <MenuItem Header="E-mail marketing" IsEnabled="False"/>
+                    <MenuItem Header="Calendário"  IsEnabled="False"/>
+                    <MenuItem Header="Questionários" IsEnabled="False"/>
+                    <MenuItem Header="Eventos" IsEnabled="False"/>
                 </MenuItem>
 
-                <MenuItem Header="Relacionamento" Padding="4">
-                </MenuItem>
-
-                <MenuItem Header="Eventos" Padding="4">
-                </MenuItem>
+                <!-- <MenuItem Header="Relacionamento" Padding="4"> -->
+                <!-- </MenuItem> -->
 
                 <MenuItem Header="Patrimonial" Padding="4">
                 </MenuItem>
 
                 <MenuItem Header="Ajuda" Padding="4">
-                    <MenuItem Header="Guia de uso" />
-                    <Separator />
-                    <MenuItem Header="Sobre" />
+                    <!-- <MenuItem Header="Guia de uso" IsEnabled="False"/> -->
+                    <!-- <Separator /> -->
+                    <MenuItem Header="Sobre" IsEnabled="False"/>
                 </MenuItem>
 
             </Menu>
-
 
             <StatusBar  Background="SlateGray"   DockPanel.Dock="Bottom" VerticalAlignment="Bottom">
 
