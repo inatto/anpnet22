@@ -1,18 +1,21 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using intnet22.lib.associate;
 using intnet22.lib.financial;
 using intnet22.lib.jud;
 
+// ReSharper disable All
+
 namespace anpnet22.lib.main
 {
-
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow
     {
-
         public static readonly RoutedCommand AssociatesOpen = new RoutedCommand();
 
         public MainWindow()
@@ -26,6 +29,17 @@ namespace anpnet22.lib.main
 
             //
             InitializeComponent();
+
+            //
+            var bitmap = new BitmapImage();
+            bitmap.BeginInit();
+            bitmap.UriSource = new Uri($"https://inat.to/farm/backs/anp.jpg", UriKind.Absolute);
+            bitmap.EndInit();
+
+            //
+            var brush = new ImageBrush(bitmap);
+            brush.Stretch = Stretch.Fill;
+            this.Background = brush;
 
             //
             //MenuAssociados_Click(null, null);
@@ -98,7 +112,6 @@ namespace anpnet22.lib.main
             };
 
             window.Show();
-
         }
 
         private void MenuPendencias_Click(object sender, RoutedEventArgs e)

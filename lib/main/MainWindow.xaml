@@ -8,78 +8,78 @@
         Title="ANPPREV ERP" Height="450" Width="800">
 
     <Window.InputBindings>
-        <KeyBinding Key="A" Modifiers="Control" Command="{x:Static local:MainWindow.AssociatesOpen }"/>
+        <KeyBinding Key="A" Modifiers="Control" Command="{x:Static local:MainWindow.AssociatesOpen }" />
     </Window.InputBindings>
 
     <Window.CommandBindings>
-        <CommandBinding Command="{x:Static local:MainWindow.AssociatesOpen}" Executed="OpenCommandBinding_Executed"/>
+        <CommandBinding Command="{x:Static local:MainWindow.AssociatesOpen}" Executed="OpenCommandBinding_Executed" />
     </Window.CommandBindings>
 
     <Grid>
 
-        <DockPanel Background="{DynamicResource {x:Static SystemColors.DesktopBrushKey}}">
+        <!-- <DockPanel Background="{DynamicResource {x:Static SystemColors.DesktopBrushKey}}"> -->
+        <DockPanel>
 
             <Menu DockPanel.Dock="Top" Padding="4">
 
                 <MenuItem Header="Principal" Padding="4">
-                    <MenuItem Header="Tema"  IsEnabled="False"/>
-                    <MenuItem Header="Configurações" IsEnabled="False"/>
-                    <MenuItem Header="Reiniciar acesso" IsEnabled="False"/>
+                    <MenuItem Header="Tema" IsEnabled="False" />
+                    <MenuItem Header="Configurações" IsEnabled="False" />
+                    <MenuItem Header="Reiniciar acesso" IsEnabled="False" />
                     <Separator />
-                    <MenuItem Header="Sair"  IsEnabled="False"/>
+                    <MenuItem Header="Sair" IsEnabled="False" />
                 </MenuItem>
 
                 <MenuItem Header="Associados" Padding="4">
                     <MenuItem Header="Consultar" Click="MenuAssociados_Click" InputGestureText="CTRL + A" />
-                    <MenuItem Header="Relatórios" IsEnabled="False"/>
+                    <MenuItem Header="Relatórios" IsEnabled="False" />
                 </MenuItem>
 
                 <MenuItem Header="Financeiro" Padding="4">
-                    <MenuItem Header="Despesas" Click="MenuDespesas_Click"/>
-                    <MenuItem Header="Receitas" Click="MenuReceitas_Click"/>
-                    <MenuItem Header="Grupos contábeis" Click="MenuGrupos_Click"/>
+                    <MenuItem Header="Despesas" Click="MenuDespesas_Click" />
+                    <MenuItem Header="Receitas" Click="MenuReceitas_Click" />
+                    <MenuItem Header="Grupos contábeis" Click="MenuGrupos_Click" />
                     <Separator />
-                    <MenuItem Header="Pendências de associado" IsEnabled="False"/>
-                    <MenuItem Header="Enviar e-mails de aviso de pendência" IsEnabled="False"/>
+                    <MenuItem Header="Pendências de associado" IsEnabled="False" />
+                    <MenuItem Header="Enviar e-mails de aviso de pendência" IsEnabled="False" />
                     <Separator />
-                    <MenuItem Header="Ver todos os lançamentos" IsEnabled="False"/>
+                    <MenuItem Header="Ver todos os lançamentos" IsEnabled="False" />
                 </MenuItem>
 
                 <MenuItem Header="Jurídico" Padding="4">
-                    <MenuItem Header="Processos" Click="MenuProcessos_Click"  />
+                    <MenuItem Header="Processos" Click="MenuProcessos_Click" />
                     <!-- <MenuItem Header="Consultar" Click="MenuJuridico_Click"  /> -->
                     <!-- <MenuItem Header="Relatórios"/> -->
                 </MenuItem>
 
                 <MenuItem Header="Conteúdo" Padding="4">
-                    <MenuItem Header="Artigos" IsEnabled="False"/>
-                    <MenuItem Header="Notícias" IsEnabled="False"/>
-                    <MenuItem Header="Restrito" IsEnabled="False"/>
+                    <MenuItem Header="Artigos" IsEnabled="False" />
+                    <MenuItem Header="Notícias" IsEnabled="False" />
+                    <MenuItem Header="Restrito" IsEnabled="False" />
                 </MenuItem>
 
                 <MenuItem Header="Marketing" Padding="4">
-                    <MenuItem Header="Campanhas" IsEnabled="False"/>
-                    <MenuItem Header="E-mail marketing" IsEnabled="False"/>
-                    <MenuItem Header="Calendário"  IsEnabled="False"/>
-                    <MenuItem Header="Questionários" IsEnabled="False"/>
-                    <MenuItem Header="Eventos" IsEnabled="False"/>
+                    <MenuItem Header="Campanhas" IsEnabled="False" />
+                    <MenuItem Header="E-mail marketing" IsEnabled="False" />
+                    <MenuItem Header="Calendário" IsEnabled="False" />
+                    <MenuItem Header="Questionários" IsEnabled="False" />
+                    <MenuItem Header="Eventos" IsEnabled="False" />
                 </MenuItem>
 
                 <!-- <MenuItem Header="Relacionamento" Padding="4"> -->
                 <!-- </MenuItem> -->
 
-                <MenuItem Header="Patrimonial" Padding="4">
-                </MenuItem>
+                <MenuItem Header="Patrimonial" Padding="4" />
 
                 <MenuItem Header="Ajuda" Padding="4">
                     <!-- <MenuItem Header="Guia de uso" IsEnabled="False"/> -->
                     <!-- <Separator /> -->
-                    <MenuItem Header="Sobre" IsEnabled="False"/>
+                    <MenuItem Header="Sobre" IsEnabled="False" />
                 </MenuItem>
 
             </Menu>
 
-            <StatusBar  Background="SlateGray"   DockPanel.Dock="Bottom" VerticalAlignment="Bottom">
+            <StatusBar Background="SlateGray" DockPanel.Dock="Bottom" VerticalAlignment="Bottom">
 
                 <StatusBar.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -101,13 +101,13 @@
                     </ItemsPanelTemplate>
                 </StatusBar.ItemsPanel>
 
-                <StatusBarItem Grid.Column="1" >
-                    <TextBlock Text="ANPPREV ERP" FontWeight="Bold" Padding="4"/>
+                <StatusBarItem Grid.Column="1">
+                    <TextBlock Text="ANPPREV ERP" FontWeight="Bold" Padding="4" />
                 </StatusBarItem>
 
                 <Separator Grid.Column="2" />
                 <StatusBarItem Grid.Column="3">
-                    <TextBlock Text="0.2224" Padding="4"/>
+                    <TextBlock Text="0.2224" Padding="4" />
                 </StatusBarItem>
 
                 <Separator Grid.Column="4" />
@@ -122,8 +122,8 @@
 
                 <Separator Grid.Column="8" />
 
-                <StatusBarItem Grid.Column="9" >
-                    <TextBlock Text="Pronto" FontWeight="Bold" Padding="4"/>
+                <StatusBarItem Grid.Column="9">
+                    <TextBlock Text="Pronto" FontWeight="Bold" Padding="4" />
                 </StatusBarItem>
 
             </StatusBar>
