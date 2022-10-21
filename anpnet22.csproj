@@ -11,4 +11,13 @@
       <ProjectReference Include="..\intnet22\intnet22.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Include="bin\Debug\net6.0-windows\hibernate.cfg.xml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NHibernate" Version="5.3.13" />
+      <PackageReference Include="NHibernate.Driver.MySqlConnector" Version="2.0.3" />
+    </ItemGroup>
+
 </Project>
